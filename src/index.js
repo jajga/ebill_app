@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route , Switch } from 'react-router-dom';
 import EbillHomeComponent from "./components/ebillHomeComponent"
 import LoginComponent from "./components/loginComponent";
 import AdminDashComponent from "./components/adminDashComponent";
+import ViewOrderComponent from "./components/vieworderComponent";
 
 const store = configureStore();
 Reactdom.render(
@@ -19,6 +20,7 @@ Reactdom.render(
                     <Route  exact path="/" component={EbillHomeComponent} />
                     <Route  path="/login" component={LoginComponent}  />
                     <Route  path="/admin" component={AdminDashComponent}  />
+                    <Route  exact path="/vieworder" component={ViewOrderComponent}  />
                     <Route  path="/about" render={() => (<div>Miss</div>)} />
                     <Route render={() => (<div>Not Found</div>)} />
                 </Switch>

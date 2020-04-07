@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route , Switch , Link } from "react-router-dom";
 
 class AdminDashComponent extends Component{
     constructor(props) {
@@ -18,8 +19,22 @@ class AdminDashComponent extends Component{
 
         return (
             <div className="container">
-                    <h2> Welcome Admin Dashboard</h2>
+                <h2> Welcome Admin Dashboard</h2> 
+                <div className="nav-container">      
+                    <Router>
+                      <div>
+                        <nav>
+                          <ul>
+                            <li>
+                              <Link to="/vieworder">Orders</Link>
+                            </li>
+                          </ul>
+                        </nav>
+                        </div>
+                    </Router>
+                </div>
             </div>
+            
         );
     }
 
