@@ -16,8 +16,8 @@ export default function configureStore() {
         createRootReducer(history),
         intialState,
         compose(
-            applyMiddleware(...middleware,routerMiddleware(history)),
-            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+            applyMiddleware(...middleware,routerMiddleware(history))
+            //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
         )
     )
 

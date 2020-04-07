@@ -15,7 +15,7 @@ class LoginComponent extends Component{
     }
 
     componentWillReceiveProps(nextProps,nextState) {
-
+        console.log(nextProps);
         if(typeof nextProps.error != 'object'){
             this.setState({loginErr:1}); 
             return false;   
@@ -23,7 +23,7 @@ class LoginComponent extends Component{
 
         if (nextProps.user !== 'undefined') {
             localStorage.setItem("token", nextProps.user)
-            this.props.history.push('admin');
+            //this.props.history.push('admin');
             console.log('Admin dashboard');
         }
     }

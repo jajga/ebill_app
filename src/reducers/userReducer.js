@@ -8,6 +8,7 @@ const initialState = {
 export default function (state = initialState ,action) {
     switch (action.type) {
         case FETCH_USER:
+        //console.log(action.payload);
             return {
                 ...state,
                 user: action.payload,
@@ -18,7 +19,7 @@ export default function (state = initialState ,action) {
                 ...state,
                 error: action.payload.response.data.errMsg,
                 user:{}
-            }    
+            }
         default:
             return state;
     }

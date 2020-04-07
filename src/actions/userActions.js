@@ -1,4 +1,4 @@
-import { FETCH_USER , LOGIN_ERR } from './types';
+import { FETCH_USER , LOGIN_ERR, FETCH_ORDER } from './types';
 import axios from "axios";
 
     // Add a request interceptor
@@ -11,7 +11,7 @@ import axios from "axios";
         Promise.reject(error)
     });
 
-    const API_HOST = 'http://18.218.31.79:82/api';
+    const API_HOST = 'http://18.218.31.79/api';
 
 
 export const validateUser = (post) => dispatch => {
@@ -32,6 +32,23 @@ export const validateUser = (post) => dispatch => {
         })
 };
 
+export const viewOrders = (post) => dispatch => {
+    let postData = post;
+
+    axios.post(API_HOST+'/order/getordercountdatewise',postData)
+        .then((res) => dispatch({
+            type: FETCH_ORDER,
+            payload: res.data
+        }))
+        .catch((err) => {
+            dispatch({
+                type: ORDER_ERR,
+                payload: err
+            })
+            
+            console.log("AXIOS ERROR: ", err);
+        })
+};
 
 
 

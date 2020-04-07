@@ -6,3 +6,5 @@ export const UPDATE_TODO = 'UPDATE_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
 export const FETCH_USER = 'FETCH_USER';
 export const LOGIN_ERR = 'LOGIN_ERR';
+export const FETCH_ORDER = 'FETCH_ORDER';
+export const ORDER_ERR = 'ORDER_ERR';

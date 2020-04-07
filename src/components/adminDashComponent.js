@@ -19,6 +19,11 @@ class AdminDashComponent extends Component{
         return (
             <div className="container">
                     <h2> Welcome Admin Dashboard</h2>
+                    <ul>
+                        <li>
+                            <a href=''>View Orders</a>
+                        </li>
+                    </ul>
             </div>
         );
     }
