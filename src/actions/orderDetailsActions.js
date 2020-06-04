@@ -1,4 +1,4 @@
-import { FETCH_ORDERS,API_HOST } from './types';
+import { GET_ORDERDETAILS,API_HOST } from './types';
 import axios from "axios";
 
     // Add a request interceptor
@@ -11,12 +11,12 @@ import axios from "axios";
         Promise.reject(error)
     });
 
-export const getOrdersCount = (post) => dispatch => {
+export const getOrderDetails = (post) => dispatch => {
     let postData = post;
 
-    axios.post(API_HOST+'/order/getordercountdatewise',postData)
+    axios.post(API_HOST+'/order/getallorders',postData)
         .then((res) => dispatch({
-            type: FETCH_ORDERS,
+            type: GET_ORDERDETAILS,
             payload: res.data
         }))
         .catch((err) => {

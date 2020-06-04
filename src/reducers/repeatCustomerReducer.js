@@ -1,19 +1,19 @@
-import { FETCH_ORDER , FETCH_ORDERS } from "../actions/types";
+import { FETCH_REPEATCUSTOMER,FETCH_REPEATCUSTOMERS } from "../actions/types";
 
 const initialState = {
-    orders:[],
-    order:{},
+    repeatcustomers:[],
+    repeatcustomer:{},
     error:{}
 }
 
 export default function (state = initialState ,action) {
     //console.log(action.type);
     switch (action.type) {
-        case FETCH_ORDERS:
-            //console.log("Reducers" ,action.payload.order);
+        case FETCH_REPEATCUSTOMERS:
+            //console.log(action.payload.order);
             return {
                 ...state,
-                orders: action.payload.order,
+                repeatcustomers: action.payload.order,
                 error:{}
             }
             default:

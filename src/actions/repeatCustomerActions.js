@@ -1,4 +1,5 @@
-import { FETCH_ORDERS,API_HOST } from './types';
+import { FETCH_REPEATCUSTOMERS, API_HOST } from './types';
+
 import axios from "axios";
 
     // Add a request interceptor
@@ -11,21 +12,17 @@ import axios from "axios";
         Promise.reject(error)
     });
 
-export const getOrdersCount = (post) => dispatch => {
-    let postData = post;
 
-    axios.post(API_HOST+'/order/getordercountdatewise',postData)
+
+export const getRepeatCustomersCount = (post) => dispatch => {
+    let postData = post;
+    //console.log("Here");
+    axios.post(API_HOST+'/order/getrepeatcustomer',postData)
         .then((res) => dispatch({
-            type: FETCH_ORDERS,
+            type: FETCH_REPEATCUSTOMERS,
             payload: res.data
         }))
         .catch((err) => {
             console.log("AXIOS ERROR: ", err);
         })
 };
-
-
-
-
-
-

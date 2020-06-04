@@ -1,4 +1,4 @@
-import { FETCH_USER , LOGIN_ERR } from './types';
+import { FETCH_USER , LOGIN_ERR,API_HOST } from './types';
 import axios from "axios";
 
     // Add a request interceptor
@@ -11,7 +11,7 @@ import axios from "axios";
         Promise.reject(error)
     });
 
-    const API_HOST = 'http://18.218.31.79:82/api';
+    
 
 
 export const validateUser = (post) => dispatch => {

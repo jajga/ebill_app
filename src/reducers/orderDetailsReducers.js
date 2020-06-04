@@ -1,19 +1,19 @@
-import { FETCH_ORDER , FETCH_ORDERS } from "../actions/types";
+import { GET_ORDERDETAILS } from "../actions/types";
 
 const initialState = {
-    orders:[],
-    order:{},
+    orderdetails:[],
+    orderdetail:{},
     error:{}
 }
 
 export default function (state = initialState ,action) {
     //console.log(action.type);
     switch (action.type) {
-        case FETCH_ORDERS:
-            //console.log("Reducers" ,action.payload.order);
+        case GET_ORDERDETAILS:
+            //console.log(action.payload.order);
             return {
                 ...state,
-                orders: action.payload.order,
+                orderdetails: action.payload.order,
                 error:{}
             }
             default:
