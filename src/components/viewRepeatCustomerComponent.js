@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getRepeatCustomersCount } from '../actions/repeatCustomerActions';
 import ViewRepeatCustomerTemplate from '../templates/viewRepeatCustomer';
-
+import { withRouter } from 'react-router-dom';
 
 
 class ViewRepeatCustomerComponent extends Component{
@@ -76,4 +76,4 @@ const mapStateToProps = (state,ownProps) => ({
     error : state.order.error
 });
 
-export default connect(mapStateToProps, {getRepeatCustomersCount})(ViewRepeatCustomerComponent);
+export default withRouter(connect(mapStateToProps, {getRepeatCustomersCount})(ViewRepeatCustomerComponent));

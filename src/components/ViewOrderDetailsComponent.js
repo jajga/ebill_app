@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getOrderDetails } from '../actions/orderDetailsActions';
 import ViewOrderDetailsTemplate from '../templates/viewOrderDetails';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -75,4 +76,4 @@ const mapStateToProps = (state,ownProps) => ({
     error : state.order.error
 });
 
-export default connect(mapStateToProps, { getOrderDetails })(ViewOrderDetailsComponent);
+export default withRouter(connect(mapStateToProps, { getOrderDetails })(ViewOrderDetailsComponent));

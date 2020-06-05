@@ -13,6 +13,7 @@ import ViewRepeatCustomerComponent from "./components/viewRepeatCustomerComponen
 import ViewOrderCountComponent from "./components/orderCountComponent";
 import ViewOrderDetailsComponent from "./components/ViewOrderDetailsComponent";
 
+
 const store = configureStore();
 Reactdom.render(
     <Provider store={store}>
@@ -28,7 +29,7 @@ Reactdom.render(
                     <Route  exact path="/viewordercount" component={ViewOrderCountComponent}  />
                     <Route  exact path="/vieworderdetails" component={ViewOrderDetailsComponent}  />
                     <Route  path="/about" render={() => (<div>Miss</div>)} />
-                    <Route render={() => (<div>Not Found</div>)} />
+                    <Route render={() => (<div>Sorry Page Not Found</div>)} />
                 </Switch>
             </Router>
             </>

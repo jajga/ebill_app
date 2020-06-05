@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getOrderCounts } from '../actions/orderCountActions';
 import ViewRepeatCustomerTemplate from '../templates/viewRepeatCustomer';
 import ViewOrderCountTemplate from '../templates/viewOrderCountTemplate';
-
+import { withRouter } from 'react-router-dom';
 
 
 class ViewOrderCountComponent extends Component{
@@ -77,4 +77,4 @@ const mapStateToProps = (state,ownProps) => ({
     error : state.order.error
 });
 
-export default connect(mapStateToProps, {getOrderCounts})(ViewOrderCountComponent);
+export default withRouter(connect(mapStateToProps, {getOrderCounts})(ViewOrderCountComponent));

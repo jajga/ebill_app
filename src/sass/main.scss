@@ -5,15 +5,73 @@
 }
 
 body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
+  /*background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);*/
+  background: #6c9ccc;
 }
 
 .container form {
-    width: 500px;
-    padding: 20px 50px;
+    /* width: 500px; */
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+    /*margin-top: 70px;*/
+    margin-bottom: 10px;
+}
+
+ul.navbar-nav li {
+    margin-right: 10px;
+    border-right: 1px solid #fff;
+    padding: 0px 10px;
+}
+
+ul.navbar-nav li a {
+    color: #fff;
+}
+
+form.form-signin {
+    width: 400px;
+    padding: 26px 26px;
+    margin: 176px auto;
+    background: #335b82;
+    color: #fff;
+    line-height: 31px;
+}
+
+form.form-signin button {
+    margin-top: 20px;
+}
+
+.order-list ul {
+    padding: 0px;
+}
+
+.order-list li span {
+    display: block;
+}
+
+.form-group label {
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.form-group input {
     border: 1px solid #ccc;
-    margin: 20% auto;
+    /* border-radius: 10px; */
+    padding: 3px 10px;
+    margin-right: 10px;
+    border: 1px solid #1869ab;
+    color: #5d5d5d;
+}
+
+.container.page {
+    margin-top: 70px;
+}
+
+.page-title h2 {
+    /* background: #ccc; */
+    padding: 5px 0px;
+    border-bottom: 1px solid #ccc;
 }
 
 
