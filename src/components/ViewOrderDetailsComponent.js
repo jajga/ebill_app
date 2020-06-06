@@ -71,9 +71,9 @@ class ViewOrderDetailsComponent extends Component{
 
 
 const mapStateToProps = (state,ownProps) => ({
-    orders: state.order.orders,
-    order: state.order.order,
-    error : state.order.error
+    orders: state.orderdetails.orderdetails,
+    order: state.orderdetails.orderdetail,
+    error : state.orderdetails.error
 });
 
 export default withRouter(connect(mapStateToProps, { getOrderDetails })(ViewOrderDetailsComponent));
